@@ -17,6 +17,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 CREATE SCHEMA IF NOT EXISTS `library_manager_system` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
 USE `library_manager_system` ;
 
+CREATE USER 'library_admin'@'localhost' IDENTIFIED BY '123456';
+GRANT ALL PRIVILEGES ON library_manager_system.* TO 'library_admin'@'localhost';
 -- -----------------------------------------------------
 -- Table `library_manager_system`.`tblauthor`
 -- -----------------------------------------------------
