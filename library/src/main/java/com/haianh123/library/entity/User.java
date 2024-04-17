@@ -17,7 +17,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id", nullable = false)
+    @Column(name = "user_id")
     private int userId;
 
     @Column(name = "user_name", nullable = false, length = 255)
@@ -32,13 +32,13 @@ public class User {
     @Column(name = "user_address", columnDefinition = "TEXT")
     private String userAddress;
 
-    @Column(name = "user_account_name", nullable = false, length = 255)
+    @Column(name = "user_account_name", nullable = false, length = 255, unique = true)
     private String userAccountName;
 
     @Column(name = "user_account_password", nullable = false, length = 255)
     private String userAccountPassword;
 
-    @Column(name = "user_role", nullable = false, length = 50)
+    @Column(name = "user_role", length = 50)
     private String userRole;
 
     @Column(name = "created_at")
