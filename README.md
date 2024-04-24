@@ -1,6 +1,6 @@
 # HỆ THỐNG QUẢN LÝ THƯ VIỆN
 ## QUY TẮC LÀM VIỆC 
-### Trước Mỗi Phiên Làm Việc
+### Trước Mỗi Phiên Làm Việc:
 1. **Pull Code Mới Nhất:**
    - Đảm bảo bạn có phiên bản code mới nhất từ remote repository:
      ```bash
