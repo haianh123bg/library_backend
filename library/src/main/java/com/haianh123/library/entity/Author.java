@@ -41,7 +41,7 @@ public class Author {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "author",
             cascade = {
                     CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
             })
