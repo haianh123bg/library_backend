@@ -41,11 +41,8 @@ public class Author {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "author",
-            cascade = {
-                    CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
-            })
-    private List<Book> books;
+//    @OneToMany(mappedBy = "author",orphanRemoval = false)
+//    private List<Book> books;
 
 
 }

@@ -37,9 +37,9 @@ public class Publisher {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "publisher",
-            cascade = {
-                    CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
-            })
-    private List<Book> books;
+//    @OneToMany(mappedBy = "publisher",
+//            cascade = {
+//                    CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
+//            })
+//    private List<Book> books;
 }

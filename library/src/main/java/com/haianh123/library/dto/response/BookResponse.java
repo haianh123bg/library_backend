@@ -1,8 +1,7 @@
 package com.haianh123.library.dto.response;
 
 import com.haianh123.library.entity.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -10,8 +9,10 @@ import java.util.List;
 
 @Setter
 @Getter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookResponse {
-
     private int id;
     private String name;
     private int publishingYear;

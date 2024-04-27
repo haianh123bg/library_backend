@@ -15,7 +15,11 @@ public enum ErrorCode {
     USER_NOT_EXISTED(1005,"Username not exist", HttpStatus.NOT_FOUND),
     UNAUTHENTICATED(1006, "Unauthenticated", HttpStatus.UNAUTHORIZED),
     UNAUTHORIZED(1007,"You do not have permission", HttpStatus.FORBIDDEN),
-    INVALID_DOB(1008, "You age must be at least {min}", HttpStatus.BAD_REQUEST);
+    INVALID_DOB(1008, "You age must be at least {min}", HttpStatus.BAD_REQUEST),
+    BOOK_NOT_EXISTED(1009,"Book not exist", HttpStatus.NOT_FOUND),
+    CATEGORY_NOT_EXISTED(1010,"Category not exist", HttpStatus.NOT_FOUND),
+    AUTHOR_NOT_EXISTED(1011,"Author not exist", HttpStatus.NOT_FOUND),
+    PUBLISHER_NOT_EXISTED(1011,"Publisher not exist", HttpStatus.NOT_FOUND);
 
     ErrorCode(int code, String message, HttpStatusCode statusCode){
         this.code = code;

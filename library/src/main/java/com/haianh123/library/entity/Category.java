@@ -1,5 +1,6 @@
 package com.haianh123.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,6 +38,7 @@ public class Category {
     @OneToMany(mappedBy = "category",
             cascade = {
                     CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
-            })
+            }, fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Book> books;
 }
