@@ -4,7 +4,6 @@ import com.haianh123.library.dto.request.BookRequest;
 import com.haianh123.library.dto.response.BookResponse;
 import com.haianh123.library.dto.response.BooksResponse;
 
-import java.util.Optional;
 
 public interface BookService {
 

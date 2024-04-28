@@ -1,5 +1,6 @@
 package com.haianh123.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,9 +38,10 @@ public class Publisher {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-//    @OneToMany(mappedBy = "publisher",
-//            cascade = {
-//                    CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
-//            })
-//    private List<Book> books;
+    @OneToMany(mappedBy = "publisher",
+            cascade = {
+                    CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH
+            })
+    @JsonIgnore
+    private List<Book> books;
 }

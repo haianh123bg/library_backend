@@ -1,5 +1,6 @@
 package com.haianh123.library.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -41,8 +42,9 @@ public class Author {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-//    @OneToMany(mappedBy = "author",orphanRemoval = false)
-//    private List<Book> books;
+    @OneToMany(mappedBy = "author",orphanRemoval = false)
+    @JsonIgnore
+    private List<Book> books;
 
 
 }
